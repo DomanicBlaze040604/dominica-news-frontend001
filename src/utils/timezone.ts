@@ -1,20 +1,20 @@
 import moment from 'moment-timezone';
 
-// Dominican Republic timezone (UTC-4)
-export const DOMINICA_TIMEZONE = 'America/Santo_Domingo';
+// Commonwealth of Dominica timezone (UTC-4)
+export const DOMINICA_TIMEZONE = 'America/Dominica';
 
 /**
- * Convert UTC date to Dominican Republic local time
+ * Convert UTC date to Dominica local time
  * @param utcDate - Date in UTC (string or Date object)
- * @returns Date object in Dominican Republic timezone
+ * @returns Date object in Dominica timezone
  */
 export const convertToLocalTime = (utcDate: string | Date): Date => {
   return moment.utc(utcDate).tz(DOMINICA_TIMEZONE).toDate();
 };
 
 /**
- * Convert Dominican Republic local time to UTC
- * @param localDate - Date in Dominican Republic timezone
+ * Convert Dominica local time to UTC
+ * @param localDate - Date in Dominica timezone
  * @returns Date object in UTC
  */
 export const convertToUTC = (localDate: Date): Date => {
@@ -22,10 +22,10 @@ export const convertToUTC = (localDate: Date): Date => {
 };
 
 /**
- * Format date for display in Dominican Republic timezone
+ * Format date for display in Dominica timezone
  * @param utcDate - Date in UTC (string or Date object)
  * @param format - Moment.js format string (optional)
- * @returns Formatted date string in Dominican Republic timezone
+ * @returns Formatted date string in Dominica timezone
  */
 export const formatLocalTime = (utcDate: string | Date, format: string = 'MMMM D, YYYY [at] h:mm A'): string => {
   return moment.utc(utcDate).tz(DOMINICA_TIMEZONE).format(format);
